@@ -12,6 +12,14 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/v1/user', userRouter)
 app.use('/api/v1/emp/employees', employeeRouter)
 
+// landing page
+app.get('/', (req, res) => {
+    res.send(`
+        <h1>Sherry Zarei - 101274382</h1>
+        <h2>Assignment #1 - COMP3123</h2>
+    `)
+});
+
 const SERVER_PORT = process.env.PORT;
 
 const mongoose = require('mongoose')
